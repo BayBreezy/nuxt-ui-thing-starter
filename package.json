@@ -1,0 +1,34 @@
+{
+  "name": "nuxt-ui-thing-starter",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "clean": "rm -rf .nuxt dist .output node_modules yarn.lock package-lock.json && yarn"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "0.8.3",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@samk-dev/nuxt-vcalendar": "^1.0.0",
+    "@types/prettier": "^3.0.0",
+    "nuxt": "^3.7.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "dependencies": {
+    "@tanstack/vue-table": "^8.9.8",
+    "@types/yup": "^0.32.0",
+    "@vee-validate/nuxt": "^4.11.6",
+    "@vee-validate/yup": "^4.11.6",
+    "@vueuse/nuxt": "^10.4.1",
+    "nuxt-icon": "^0.5.0",
+    "radix-vue": "^0.1.34",
+    "tailwind-variants": "^0.1.14",
+    "vue-command-palette": "^0.2.2",
+    "yup": "1.2.0"
+  }
+}
