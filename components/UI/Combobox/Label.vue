@@ -1,7 +1,7 @@
 <template>
-  <ComboboxSeparator :as-child="asChild" :class="styles({ class: props.class })">
+  <ComboboxLabel :as-child="asChild" :class="styles({ class: props.class })">
     <slot></slot>
-  </ComboboxSeparator>
+  </ComboboxLabel>
 </template>
 
 <script lang="ts" setup>
@@ -9,7 +9,8 @@
     asChild?: boolean;
     class?: any;
   }>();
+
   const styles = tv({
-    base: "-mx-1 h-px bg-border",
+    base: "px-2 py-1.5 pl-9 text-sm font-medium text-muted-foreground",
   });
 </script>

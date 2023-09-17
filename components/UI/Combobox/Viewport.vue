@@ -1,11 +1,11 @@
 <template>
-  <DropdownMenuPortal :to="to || 'body'">
+  <ComboboxViewport :as-child="asChild">
     <slot></slot>
-  </DropdownMenuPortal>
+  </ComboboxViewport>
 </template>
 
 <script lang="ts" setup>
   const props = defineProps<{
-    to?: string | HTMLElement;
+    asChild?: boolean;
   }>();
 </script>

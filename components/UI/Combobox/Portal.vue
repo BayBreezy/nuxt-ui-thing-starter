@@ -1,7 +1,7 @@
 <template>
-  <DropdownMenuPortal :to="to || 'body'">
+  <ComboboxPortal :to="to">
     <slot></slot>
-  </DropdownMenuPortal>
+  </ComboboxPortal>
 </template>
 
 <script lang="ts" setup>
