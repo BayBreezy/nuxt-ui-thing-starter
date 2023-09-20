@@ -41,7 +41,6 @@
     id?: string;
     rules?: any;
     validateOnMount?: boolean;
-
     numInputs?: number;
     separator?: string;
     inputClasses?: any;
