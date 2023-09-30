@@ -2,6 +2,7 @@ import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 // @ts-ignore
 import twAnimate from "tailwindcss-animate";
+import twForms from "@tailwindcss/forms";
 
 export default <Partial<Config>>{
   darkMode: "class",
@@ -96,5 +97,5 @@ export default <Partial<Config>>{
       },
     },
   },
-  plugins: [twAnimate],
+  plugins: [twAnimate, twForms({ strategy: "class" })],
 };
