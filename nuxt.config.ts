@@ -2,8 +2,15 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript: { shim: false },
-  tailwindcss: { exposeConfig: true },
-  css: ["~/assets/css/table.css"],
+  tailwindcss: { exposeConfig: true, injectPosition: "last" },
+  notivue: {
+    enqueue: true,
+    pauseOnHover: true,
+    pauseOnTabChange: true,
+    position: "top-right",
+    teleportTo: "body",
+  },
+  css: ["~/assets/css/table.css", "notivue/notifications.css", "notivue/animations.css"],
   imports: {
     // Add tv and VariantProps to the set of auto imported modules
     imports: [
@@ -33,5 +40,6 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@vee-validate/nuxt",
     "@samk-dev/nuxt-vcalendar",
+    "notivue/nuxt",
   ],
 });
