@@ -4,6 +4,8 @@
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+    <UiToastToaster />
+    <UiVueSonner />
     <Notivue v-slot="item">
       <NotivueSwipe :item="item">
         <Notifications

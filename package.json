@@ -3,11 +3,12 @@
   "private": false,
   "scripts": {
     "build": "nuxt build",
+    "clean": "rm -rf .nuxt dist .output node_modules yarn.lock package-lock.json && npm i",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "clean": "rm -rf .nuxt dist .output node_modules yarn.lock package-lock.json && npm i"
+    "ui:add": "npx --yes ui-thing@latest add"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
@@ -17,6 +18,7 @@
     "@samk-dev/nuxt-vcalendar": "^1.0.2",
     "@tailwindcss/forms": "^0.5.7",
     "@types/prettier": "^3.0.0",
+    "@vueuse/core": "^10.7.1",
     "@vueuse/nuxt": "^10.7.1",
     "nuxt": "^3.9.1",
     "nuxt-icon": "^0.6.8",
@@ -26,9 +28,11 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@morev/vue-transitions": "^2.3.6",
     "@tanstack/vue-table": "^8.11.3",
     "@vee-validate/nuxt": "^4.12.4",
     "@vee-validate/zod": "^4.12.4",
+    "@vueform/multiselect": "^2.6.6",
     "datatables.net-buttons-dt": "^2.4.2",
     "datatables.net-colreorder-dt": "^1.7.0",
     "datatables.net-responsive-dt": "^2.5.0",
@@ -40,6 +44,7 @@
     "notivue": "^2.1.1",
     "radix-vue": "^1.3.0",
     "tailwind-variants": "^0.1.20",
+    "vue-sonner": "^1.0.2",
     "vue3-otp-input": "^1.0.0",
     "zod": "3.22.4"
   }
