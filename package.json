@@ -20,6 +20,7 @@
     "@tailwindcss/forms": "^0.5.7",
     "@types/prettier": "^3.0.0",
     "@vueuse/core": "^10.7.1",
+    "@vueuse/math": "^10.7.1",
     "@vueuse/nuxt": "^10.7.1",
     "nuxt": "^3.9.1",
     "nuxt-icon": "^0.6.8",
