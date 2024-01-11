@@ -1,24 +1,30 @@
 <template>
-  <div class="container py-5">
-    <div class="flex items-center justify-between">
-      <div>
-        <h1 class="mb-1 text-2xl font-bold">Users</h1>
-        <p class="mb-5 text-muted-foreground">A list of users in the system</p>
-      </div>
-      <button @click="toggleTheme">
-        <Icon name="lucide:sun" />
-      </button>
-    </div>
-    <UIDT @ready="table = $event" :options="options" :data="users" />
-  </div>
+  <UiContainer class="py-5">
+    <h1 class="mb-1 text-2xl font-bold">Users</h1>
+    <p class="text-muted-foreground">A list of users in the system</p>
+
+    <UiGradientDivider class="my-7" />
+
+    <ClientOnly>
+      <template #fallback>
+        <TableLoading />
+      </template>
+      <UiDatatable
+        class="nowrap hover order-column row-border"
+        @ready="table = $event"
+        :options="options"
+        :data="users"
+      />
+    </ClientOnly>
+  </UiContainer>
 </template>
 
 <script lang="ts" setup>
   import DataTableRef from "datatables.net";
-  import { Config } from "datatables.net/types/types";
+  import type { Config } from "datatables.net";
 
   const { data: users } = await useAsyncData<any[]>(
-    "any",
+    "users",
     () => $fetch("https://randomuser.me/api/?results=100"),
     {
       default: () => [],
@@ -27,20 +33,31 @@
   );
 
   const options = ref<Config>({
-    dom: "<'block'Q><'dataTables_header_wrapper'Bf>rt<'dataTables_footer_wrapper'ilp>",
-    buttons: [
-      "colvis",
-      "copy",
-      "csv",
-      "excel",
-      "pdf",
-      { extend: "print", text: "Print", key: { key: "p", altKey: true } },
-    ],
+    dom: TABLE_DOM,
+    autoWidth: true,
+    responsive: true,
+    buttons: TABLE_BUTTONS.map((b) =>
+      b == "colvis"
+        ? {
+            extend: b,
+            text: "Columns",
+            columns: ":not(.hide-action)",
+          }
+        : {
+            extend: b,
+            exportOptions: {
+              // Not the action column
+              columns: ":not([aria-label='Actions'])",
+            },
+          }
+    ),
+    // Order by First Name by default
+    order: [[1, "asc"]],
+    // Customize the options in the `Rows per page` dropdown
     lengthMenu: [
       [10, 20, 30, 40, 50, -1],
       [10, 20, 30, 40, 50, "All"],
     ],
-    colReorder: true,
     language: {
       searchPlaceholder: "Filter users...",
       search: "",
@@ -51,9 +68,15 @@
         previous: "Prev",
       },
     },
-    select: true,
-    responsive: true,
     columns: [
+      {
+        data: "id",
+        title: "ID",
+        visible: false,
+        render(data, type, row, meta) {
+          return row.id.value || "N/A";
+        },
+      },
       {
         data: "name.first",
         title: "First Name",
@@ -74,12 +97,55 @@
           return `<a class="underline decoration-dashed underline-offset-2 decoration-primary/50" href="tel:${data}">${data}</a>`;
         },
       },
+      {
+        data: null,
+        searchable: false,
+        responsivePriority: 1,
+        name: "actions",
+        className: "hide-action",
+        ariaTitle: "Actions",
+        orderable: false,
+        render(_, __, row, ___) {
+          return `
+          <div class="flex items-center justify-center gap-2">
+            <button edit-button data-id="${row.id}" class="${TABLE_PRIMARY_BTN}">Edit</button>
+            <button delete-button data-id="${row.id}" class="${TABLE_SECONDARY_BTN}">Delete</button>
+            </div>
+          `;
+        },
+      },
     ],
   });
 
+  // Get a reference to the table so you can do stuff with it in the script
   const table = ref<InstanceType<typeof DataTableRef<any[]>> | null>(null);
-  const mode = useColorMode();
-  const toggleTheme = () => {
-    mode.value = mode.value === "light" ? "dark" : "light";
-  };
+
+  onMounted(() => {
+    setTimeout(() => {
+      table.value?.on("click", "button[edit-button]", async function (e: Event) {
+        e.preventDefault();
+        const id = (e.target as HTMLButtonElement)?.dataset.id;
+        if (id) {
+          // Do something with the ID
+          console.log(id);
+          push.success({
+            title: "Success",
+            message: "You clicked the edit button",
+          });
+        }
+      });
+      table.value?.on("click", "button[delete-button]", async function (e: Event) {
+        e.preventDefault();
+        const id = (e.target as HTMLButtonElement)?.dataset.id;
+        if (id) {
+          // Do something with the ID
+          console.log(id);
+          push.info({
+            title: "Deleted",
+            message: "You clicked the delete button",
+          });
+        }
+      });
+    }, 1000);
+  });
 </script>

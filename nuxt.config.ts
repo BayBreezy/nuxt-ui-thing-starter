@@ -1,7 +1,10 @@
 /**
  * Replace these with the details of your website
  */
-import * as SITE_CONST from "./utils/constants";
+const SITE_TITLE = "Awesome Website";
+const SITE_NAME = "My Awesome Website";
+const SITE_DESCRIPTION = "Explore the world of awesome";
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript: { shim: false },
@@ -26,23 +29,26 @@ export default defineNuxtConfig({
       {
         from: "vue-sonner",
         name: "toast",
-        as: "useSonner"
-      }
+        as: "useSonner",
+      },
     ],
   },
 
   app: {
     head: {
-      title: SITE_CONST.SITE_TITLE,
-      titleTemplate: `%s | ${SITE_CONST.SITE_NAME}`,
+      title: SITE_TITLE,
+      titleTemplate: `%s | ${SITE_NAME}`,
 
-      script: [{
-        src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js",
-        defer: true
-      }, {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.min.js",
-        defer: true
-      }]
+      script: [
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js",
+          defer: true,
+        },
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.min.js",
+          defer: true,
+        },
+      ],
     },
   },
 
@@ -54,10 +60,10 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "nuxt-icon",
     "@samk-dev/nuxt-vcalendar",
-    "@morev/vue-transitions/nuxt"
+    "@morev/vue-transitions/nuxt",
   ],
 
   build: {
-    transpile: ["vue-sonner"]
-  }
+    transpile: ["vue-sonner"],
+  },
 });

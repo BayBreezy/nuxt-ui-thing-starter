@@ -1,18 +1,28 @@
 <template>
-  <div class="container py-5">
-    <div class="flex items-center gap-3">
+  <UiContainer class="py-5">
+    <h1 class="mb-1 text-2xl font-bold">Notivue</h1>
+    <p class="text-muted-foreground">
+      Check out these notifications. Docs here:
+      <NuxtLink
+        class="underline underline-offset-2"
+        target="_blank"
+        to="https://notivuedocs.netlify.app/installation/nuxt.html"
+        external
+        >Notivue Nuxt Docs</NuxtLink
+      >
+    </p>
+
+    <div class="mt-10 flex items-center gap-3">
       <template v-for="(p, i) in testPushes" :key="i">
-        <UIButton :variant="p.variant" @click="p.onClick">
+        <UiButton :variant="p.variant" @click="p.onClick">
           {{ p.text }}
-        </UIButton>
+        </UiButton>
       </template>
     </div>
-  </div>
+  </UiContainer>
 </template>
 
 <script setup lang="ts">
-  const push = usePush();
-
   const testPushes = [
     {
       text: "Success",
