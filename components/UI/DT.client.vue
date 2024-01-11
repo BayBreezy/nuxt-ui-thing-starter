@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts" setup generic="T">
-  import { Config } from "datatables.net/types/types";
   import DataTableRef from "datatables.net";
+  import { Config } from "datatables.net/types/types";
 
   const props = withDefaults(
     defineProps<{

@@ -17,7 +17,8 @@
 </template>
 
 <script setup lang="ts">
-  import { lightTheme, darkTheme, type NotivueTheme } from "notivue";
+  import { darkTheme, lightTheme } from "notivue";
+  import type { NotivueTheme } from "notivue";
 
   const mode = useColorMode();
   mode.value = "dark";

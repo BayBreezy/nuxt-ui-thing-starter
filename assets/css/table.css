@@ -75,7 +75,7 @@ table.dataTable thead > tr > td.sorting_asc:before,
 table.dataTable thead > tr > td.sorting_desc:before,
 table.dataTable thead > tr > td.sorting_asc_disabled:before,
 table.dataTable thead > tr > td.sorting_desc_disabled:before {
-  @apply bottom-[38%] bg-cover w-5 h-5 bg-[url("https://api.iconify.design/lucide:chevron-up.svg")] dark:bg-[url("https://api.iconify.design/lucide:chevron-up.svg?color=white")];
+  @apply bottom-[38%] h-5 w-5 bg-[url("https://api.iconify.design/lucide:chevron-up.svg")] bg-cover dark:bg-[url("https://api.iconify.design/lucide:chevron-up.svg?color=white")];
   content: "";
 }
 table.dataTable thead > tr > th.sorting:after,
@@ -88,7 +88,7 @@ table.dataTable thead > tr > td.sorting_asc:after,
 table.dataTable thead > tr > td.sorting_desc:after,
 table.dataTable thead > tr > td.sorting_asc_disabled:after,
 table.dataTable thead > tr > td.sorting_desc_disabled:after {
-  @apply top-[38%] bg-cover w-5 h-5 bg-[url("https://api.iconify.design/lucide:chevron-down.svg")] dark:bg-[url("https://api.iconify.design/lucide:chevron-down.svg?color=white")];
+  @apply top-[38%] h-5 w-5 bg-[url("https://api.iconify.design/lucide:chevron-down.svg")] bg-cover dark:bg-[url("https://api.iconify.design/lucide:chevron-down.svg?color=white")];
   content: "";
 }
 table.dataTable thead > tr > th.sorting_asc:before,
@@ -268,7 +268,7 @@ table.dataTable tbody td.dt-body-nowrap {
  * Table styles
  */
 table.dataTable {
-  @apply w-full border-separate mx-auto clear-both border-spacing-0 border rounded-md my-5;
+  @apply clear-both mx-auto my-5 w-full border-separate border-spacing-0 rounded-md border;
   /*
    * Header and footer styles
    */
@@ -478,40 +478,40 @@ table.dataTable td {
   @apply flex flex-wrap items-center gap-2.5;
 }
 .dataTables_wrapper .dt-buttons .dt-button {
-  @apply inline-flex items-center justify-center border border-input rounded-md bg-transparent h-9 cursor-pointer transition-colors text-sm font-medium px-3 hover:bg-muted focus:ring-offset-background focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:outline-none;
+  @apply inline-flex h-9 cursor-pointer items-center justify-center rounded-md border border-input bg-transparent px-3 text-sm font-medium transition-colors hover:bg-muted focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
 }
 
 /* Column visibility styles */
 .dataTables_wrapper .dt-button-down-arrow {
-  @apply inline-flex items-center justify-center w-4 h-4 text-[9px] ml-1 text-muted-foreground;
+  @apply ml-1 inline-flex h-4 w-4 items-center justify-center text-[9px] text-muted-foreground;
 }
 .dataTables_wrapper .dt-button-background {
-  @apply fixed z-10 inset-0  bg-background/70;
+  @apply fixed inset-0 z-10  bg-background/70;
 }
 .dataTables_wrapper .dt-button-collection {
   @apply !-mt-10;
   div {
-    @apply fixed flex flex-col gap-1.5 bg-background p-1.5 rounded-md shadow-lg z-40 min-w-[200px] border border-border/50;
+    @apply fixed z-40 flex min-w-[200px] flex-col gap-1.5 rounded-md border border-border/50 bg-background p-1.5 shadow-lg;
   }
 }
 .dataTables_wrapper .dt-button-collection div .dt-button {
-  @apply justify-start relative;
+  @apply relative justify-start;
 }
 .dataTables_wrapper .dt-button-collection .dt-button-active {
-  @apply after:absolute after:-mt-2.5 after:right-3 after:top-1/2 after:inline-block after:text-primary after:content-['✓'];
+  @apply after:absolute after:right-3 after:top-1/2 after:-mt-2.5 after:inline-block after:text-primary after:content-['✓'];
 }
 /**
  * Copy popup styles
  */
 .dt-button-info {
-  @apply fixed inset-0 z-50 w-full h-full bg-background/50 backdrop-blur flex flex-col items-center justify-center font-medium gap-2;
+  @apply fixed inset-0 z-50 flex h-full w-full flex-col items-center justify-center gap-2 bg-background/50 font-medium backdrop-blur;
 }
 
 /**
 * Empty Styles
 */
 .dataTables_wrapper .dataTables_empty {
-  @apply text-sm text-muted-foreground py-10;
+  @apply py-10 text-sm text-muted-foreground;
 }
 
 /*
@@ -523,7 +523,7 @@ table.dataTable td {
 }
 
 .dataTables_wrapper .dataTables_length select {
-  @apply border-input rounded-md font-normal transition h-9 form-select focus:border-input focus:ring-offset-2 focus:ring-2 focus:ring-ring text-sm inline-flex focus:ring-offset-background bg-background;
+  @apply form-select inline-flex h-9 rounded-md border-input bg-background text-sm font-normal transition focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
 }
 .dataTables_footer_wrapper .dataTables_length {
   @apply lg:ml-auto;
@@ -533,27 +533,27 @@ table.dataTable td {
 }
 
 .dataTables_footer_wrapper .dataTables_length label {
-  @apply flex items-center gap-2 cursor-pointer text-sm;
+  @apply flex cursor-pointer items-center gap-2 text-sm;
 }
 
 .dataTables_wrapper .dataTables_filter label {
-  @apply flex items-center gap-2.5 text-sm cursor-pointer;
+  @apply flex cursor-pointer items-center gap-2.5 text-sm;
 }
 .dataTables_wrapper .dataTables_filter input {
-  @apply border-input rounded-md transition bg-transparent h-9 form-input focus:border-input focus:ring-offset-2 focus:ring-2 focus:ring-ring text-sm inline-flex w-full focus:ring-offset-background;
+  @apply form-input inline-flex h-9 w-full rounded-md border-input bg-transparent text-sm transition focus:border-input focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background;
 }
 .dataTables_header_wrapper {
-  @apply flex flex-col lg:justify-between lg:flex-row lg:items-center gap-5;
+  @apply flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between;
 }
 
 .dataTables_footer_wrapper {
-  @apply flex flex-col lg:flex-row lg:items-center  gap-5;
+  @apply flex flex-col gap-5 lg:flex-row  lg:items-center;
 }
 .dataTables_wrapper .dataTables_paginate {
-  @apply space-x-3 text-sm  hidden sm:flex;
+  @apply hidden space-x-3  text-sm sm:flex;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
-  @apply border border-input rounded-md text-center inline-flex items-center justify-center bg-transparent h-9 cursor-pointer w-9 ml-1 transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ring focus:outline-none focus:ring-offset-background;
+  @apply ml-1 inline-flex h-9 w-9 cursor-pointer items-center justify-center rounded-md border border-input bg-transparent text-center transition-colors focus:outline-none focus:ring-offset-background focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
 }
 .dataTables_wrapper .dataTables_paginate .previous,
 .dataTables_wrapper .dataTables_paginate .next {
@@ -561,18 +561,18 @@ table.dataTable td {
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
 .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
-  @apply text-primary-foreground bg-primary border border-primary;
+  @apply border border-primary bg-primary text-primary-foreground;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
-  @apply cursor-not-allowed text-muted-foreground bg-transparent shadow-none hover:border-border;
+  @apply cursor-not-allowed bg-transparent text-muted-foreground shadow-none hover:border-border;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-  @apply text-primary-foreground bg-primary border border-primary;
+  @apply border border-primary bg-primary text-primary-foreground;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:active {
-  @apply text-primary-foreground bg-primary border border-primary outline-none;
+  @apply border border-primary bg-primary text-primary-foreground outline-none;
 }
 .dataTables_wrapper .dataTables_paginate .ellipsis {
   padding: 0 1em;
@@ -674,10 +674,10 @@ table.dataTable td {
  */
 
 div.dt-rowReorder-float-parent {
-  @apply table-fixed outline-2 outline outline-primary z-[2001] !absolute overflow-hidden rounded-md;
+  @apply !absolute z-[2001] table-fixed overflow-hidden rounded-md outline outline-2 outline-primary;
 }
 div.dt-rowReorder-float-parent table.dt-rowReorder-float {
-  @apply opacity-80 bg-background !m-0;
+  @apply !m-0 bg-background opacity-80;
 }
 
 div.dt-rowReorder-float-parent.drop-not-allowed {
@@ -737,7 +737,7 @@ div.dtsb-searchBuilder div.dtsb-titleRow {
   margin-bottom: 2px;
 }
 div.dtsb-searchBuilder div.dtsb-titleRow div.dtsb-title {
-  @apply inline-block pt-2 font-semibold text-sm;
+  @apply inline-block pt-2 text-sm font-semibold;
 }
 div.dtsb-searchBuilder div.dtsb-titleRow div.dtsb-title:empty {
   display: inline;
@@ -790,7 +790,7 @@ div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria {
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-dropDown,
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria input.dtsb-input {
-  @apply min-w-[5em] mr-3 max-w-xs text-sm rounded-md bg-background;
+  @apply mr-3 min-w-[5em] max-w-xs rounded-md bg-background text-sm;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-dropDown option.dtsb-notItalic,
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria input.dtsb-input option.dtsb-notItalic {
@@ -887,7 +887,7 @@ div.dtsb-searchBuilder input {
   @apply bg-background;
 }
 div.dtsb-searchBuilder button.dtsb-button {
-  @apply border border-input rounded-md inline-block whitespace-nowrap px-3 py-2 relative box-border cursor-pointer text-sm overflow-hidden bg-background select-none outline-none text-ellipsis hover:bg-accent transition-colors;
+  @apply relative box-border inline-block cursor-pointer select-none overflow-hidden text-ellipsis whitespace-nowrap rounded-md border border-input bg-background px-3 py-2 text-sm outline-none transition-colors hover:bg-accent;
 }
 div.dtsb-searchBuilder div.dtsb-logicContainer {
   @apply rounded-md;
@@ -904,25 +904,25 @@ div.dtsb-searchBuilder button.dtsb-iptbtn {
   text-align: left;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer {
-  @apply rounded-md flex flex-row flex-wrap justify-start items-center content-start;
+  @apply flex flex-row flex-wrap content-start items-center justify-start rounded-md;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-logic {
-  @apply grow shrink-0 basis-12 m-0 rounded-r-none;
+  @apply m-0 shrink-0 grow basis-12 rounded-r-none;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-logicContainer button.dtsb-clearGroup {
   @apply m-0 w-8 rounded-l-none;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-dropDown,
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria input.dtsb-input {
-  @apply border border-input rounded-md;
+  @apply rounded-md border border-input;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-condition {
-  @apply border-green-500 focus:border-green-500 focus:ring-offset-2 focus:ring-green-500/50 focus:ring-2 transition focus:ring-offset-background;
+  @apply border-green-500 transition focus:border-green-500 focus:ring-2 focus:ring-green-500/50 focus:ring-offset-2 focus:ring-offset-background;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-data {
-  @apply border-red-500 focus:border-red-500 focus:ring-offset-2 focus:ring-red-500/50 focus:ring-2 transition focus:ring-offset-background;
+  @apply border-red-500 transition focus:border-red-500 focus:ring-2 focus:ring-red-500/50 focus:ring-offset-2 focus:ring-offset-background;
 }
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria select.dtsb-value,
 div.dtsb-searchBuilder div.dtsb-group div.dtsb-criteria input.dtsb-value {
-  @apply border-blue-500 focus:border-blue-500 focus:ring-offset-2 focus:ring-blue-500/50 focus:ring-2 transition focus:ring-offset-background;
+  @apply border-blue-500 transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-background;
 }

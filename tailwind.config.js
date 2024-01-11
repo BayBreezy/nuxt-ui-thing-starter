@@ -1,10 +1,7 @@
-import twForms from "@tailwindcss/forms";
-import { type Config } from "tailwindcss";
-// @ts-ignore
-import twAnimate from "tailwindcss-animate";
-import { fontFamily } from "tailwindcss/defaultTheme";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
-export default <Partial<Config>>{
+/**@type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: "class",
   theme: {
     extend: {
@@ -14,16 +11,17 @@ export default <Partial<Config>>{
           DEFAULT: "1rem",
           sm: "2rem",
           lg: "4rem",
-          xl: "5rem",
-          "2xl": "6rem",
+        },
+        screens: {
+          "2xl": "1440px",
         },
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["Inter var", "Inter", ...fontFamily.sans],
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
@@ -97,5 +95,5 @@ export default <Partial<Config>>{
       },
     },
   },
-  plugins: [twAnimate, twForms({ strategy: "class" })],
+  plugins: [require("tailwindcss-animate")],
 };

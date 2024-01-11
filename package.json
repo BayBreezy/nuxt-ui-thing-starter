@@ -10,21 +10,25 @@
     "clean": "rm -rf .nuxt dist .output node_modules yarn.lock package-lock.json && npm i"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@nuxt/devtools": "1.0.6",
+    "@nuxtjs/color-mode": "^3.3.2",
     "@nuxtjs/tailwindcss": "^6.10.4",
     "@samk-dev/nuxt-vcalendar": "^1.0.2",
     "@tailwindcss/forms": "^0.5.7",
     "@types/prettier": "^3.0.0",
+    "@vueuse/nuxt": "^10.7.1",
     "nuxt": "^3.9.1",
+    "nuxt-icon": "^0.6.8",
     "prettier": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@tanstack/vue-table": "^8.11.3",
     "@vee-validate/nuxt": "^4.12.4",
     "@vee-validate/zod": "^4.12.4",
-    "@vueuse/nuxt": "^10.7.1",
     "datatables.net-buttons-dt": "^2.4.2",
     "datatables.net-colreorder-dt": "^1.7.0",
     "datatables.net-responsive-dt": "^2.5.0",
@@ -34,7 +38,6 @@
     "datatables.net-vue3": "^2.1.3",
     "jszip": "^3.10.1",
     "notivue": "^2.1.1",
-    "nuxt-icon": "^0.6.8",
     "radix-vue": "^1.3.0",
     "tailwind-variants": "^0.1.20",
     "vue3-otp-input": "^1.0.0",

@@ -14,8 +14,8 @@
 </template>
 
 <script lang="ts" setup>
-  import { Config } from "datatables.net/types/types";
   import DataTableRef from "datatables.net";
+  import { Config } from "datatables.net/types/types";
 
   const { data: users } = await useAsyncData<any[]>(
     "any",
