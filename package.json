@@ -9,6 +9,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "ui:add": "npx --yes ui-thing@latest add",
+    "ui:theme": "npx --yes ui-thing@latest theme",
+    "ui:prettier": "npx --yes ui-thing@latest prettier",
+    "ui:shortcuts": "npx --yes ui-thing@latest shortcuts",
     "rm:recommendations": "npx --yes rimraf .vscode/extensions.json"
   },
   "devDependencies": {
