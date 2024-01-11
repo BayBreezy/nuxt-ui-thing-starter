@@ -12,7 +12,7 @@
       >
     </p>
 
-    <div class="mt-10 flex items-center gap-3">
+    <div class="mt-10 flex flex-wrap items-center gap-3">
       <template v-for="(p, i) in testPushes" :key="i">
         <UiButton :variant="p.variant" @click="p.onClick">
           {{ p.text }}
