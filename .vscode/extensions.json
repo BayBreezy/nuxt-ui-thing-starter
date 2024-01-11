@@ -1,0 +1,20 @@
+{
+  "recommendations": [
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "streetsidesoftware.code-spell-checker",
+    "adam-bender.commit-message-editor",
+    "mrmlnc.vscode-duplicate",
+    "antfu.goto-alias",
+    "antfu.iconify",
+    "mskelton.npm-outdated",
+    "idered.npm",
+    "nuxtr.nuxtr-vscode",
+    "esbenp.prettier-vscode",
+    "natqe.reload",
+    "bradlc.vscode-tailwindcss",
+    "jvitor83.typings-autoinstaller",
+    "matijao.vue-nuxt-snippets",
+    "vue.volar"
+  ]
+}
