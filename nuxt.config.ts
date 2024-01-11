@@ -9,7 +9,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript: { shim: false },
   tailwindcss: { exposeConfig: true, injectPosition: "last" },
-
+  build: { transpile: ["vue-sonner"] },
+  colorMode: { classSuffix: "" },
+  css: ["notivue/notifications.css", "notivue/animations.css"],
   notivue: {
     enqueue: true,
     pauseOnHover: true,
@@ -18,19 +20,12 @@ export default defineNuxtConfig({
     teleportTo: "body",
   },
 
-  colorMode: { classSuffix: "" },
-  css: ["notivue/notifications.css", "notivue/animations.css"],
-
   imports: {
     // Add tv and VariantProps to the set of auto imported modules
     imports: [
       { from: "tailwind-variants", name: "tv" },
       { from: "tailwind-variants", name: "VariantProps", type: true },
-      {
-        from: "vue-sonner",
-        name: "toast",
-        as: "useSonner",
-      },
+      { from: "vue-sonner", name: "toast", as: "useSonner" },
     ],
   },
 
@@ -61,9 +56,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "@samk-dev/nuxt-vcalendar",
     "@morev/vue-transitions/nuxt",
+    // Just in case you need it
+    "@pinia/nuxt",
   ],
-
-  build: {
-    transpile: ["vue-sonner"],
-  },
 });

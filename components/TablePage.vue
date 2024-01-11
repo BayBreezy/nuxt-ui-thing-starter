@@ -1,7 +1,16 @@
 <template>
   <UiContainer class="py-5">
     <h1 class="mb-1 text-2xl font-bold">Users</h1>
-    <p class="text-muted-foreground">A list of users in the system</p>
+    <p class="text-muted-foreground">
+      A list of users in the system. Explore the docs here:
+      <NuxtLink
+        class="underline underline-offset-2"
+        target="_blank"
+        to="https://datatables.net/"
+        external
+        >Datatables.net Docs</NuxtLink
+      >
+    </p>
 
     <UiGradientDivider class="my-7" />
 
@@ -23,14 +32,12 @@
   import DataTableRef from "datatables.net";
   import type { Config } from "datatables.net";
 
-  const { data: users } = await useAsyncData<any[]>(
-    "users",
-    () => $fetch("https://randomuser.me/api/?results=100"),
-    {
-      default: () => [],
-      transform: (data: any) => data.results,
-    }
-  );
+  // Get the data server side. We could also import the users from the store like this
+  // const { users } = storeToRefs(useUserStore());
+  const { data: users } = await useAsyncData("users", () => useUserStore().fetchUsers(), {
+    default: () => [],
+    transform: (data) => data.results,
+  });
 
   const options = ref<Config>({
     dom: TABLE_DOM,
