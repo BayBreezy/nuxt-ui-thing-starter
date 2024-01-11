@@ -15,28 +15,7 @@
   // 	],
   // 	"description": "Log output to console"
   // }
-  "Create props": {
-    "scope": "typescript",
-    "prefix": "props",
-    "body": ["const ${1:props} = defineProps<{", "\t$0", "}>()"],
-    "description": "Create a props block in setup block"
-  },
-  "Create props with defaults": {
-    "scope": "typescript",
-    "prefix": "props",
-    "body": [
-      "const ${1:propsWithDefaults} = withDefaults(defineProps<{",
-      "\t$0",
-      "}>(), {",
-      "",
-      "});"
-    ]
-  },
-  "Create emit": {
-    "scope": "typescript",
-    "prefix": "emits",
-    "body": ["const ${1:emits} = defineEmits<{", "\t$0", "}>();"]
-  },
+
   "Create tailwind-variant styles": {
     "scope": "typescript",
     "prefix": "styles",
