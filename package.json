@@ -36,7 +36,7 @@
   "dependencies": {
     "@morev/vue-transitions": "^2.3.6",
     "@pinia/nuxt": "^0.5.1",
-    "@tanstack/vue-table": "^8.11.3",
+    "@tanstack/vue-table": "^8.11.6",
     "@vee-validate/nuxt": "^4.12.4",
     "@vee-validate/zod": "^4.12.4",
     "@vueform/multiselect": "^2.6.6",
