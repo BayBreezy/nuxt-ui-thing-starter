@@ -1,14 +1,12 @@
 /**
  * Replace these with the details of your website
  */
-const SITE_TITLE = "Awesome Website";
-const SITE_NAME = "My Awesome Website";
-const SITE_DESCRIPTION = "Explore the world of awesome";
+import { SITE_NAME, SITE_TITLE } from "./utils/seo";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
   typescript: { shim: false },
-  tailwindcss: { exposeConfig: true, injectPosition: "last" },
+  tailwindcss: { exposeConfig: true },
   build: { transpile: ["vue-sonner"] },
   colorMode: { classSuffix: "" },
   css: ["notivue/notifications.css", "notivue/animations.css"],

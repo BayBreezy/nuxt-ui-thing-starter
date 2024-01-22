@@ -1,10 +1,4 @@
 /**
- * Replace these with the details of your website
- */
-export const SITE_TITLE = "Awesome Website";
-export const SITE_NAME = "My Awesome Website";
-export const SITE_DESCRIPTION = "Explore the world of awesome";
-/**
  * These are used for the Datatable component
  */
 export const TABLE_BUTTONS = ["copy", "colvis", "csv", "excel", "pdf", "print"];
