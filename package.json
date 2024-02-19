@@ -50,7 +50,7 @@
     "jszip": "^3.10.1",
     "notivue": "^2.2.1",
     "pinia": "^2.1.7",
-    "radix-vue": "^1.4.6",
+    "radix-vue": "^1.4.7",
     "tailwind-variants": "^0.2.0",
     "vue-sonner": "^1.0.3",
     "vue3-otp-input": "^1.0.0",
