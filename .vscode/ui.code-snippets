@@ -19,6 +19,6 @@
   "Create tailwind-variant styles": {
     "scope": "typescript",
     "prefix": "styles",
-    "body": ["const styles = tv({", "\tbase: \"$0\"", "})"]
-  }
+    "body": ["const styles = tv({", "\tbase: \"$0\"", "})"],
+  },
 }
