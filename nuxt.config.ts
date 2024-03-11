@@ -5,10 +5,16 @@ import { SITE_NAME, SITE_TITLE } from "./utils/seo";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  typescript: { shim: false },
-  tailwindcss: { exposeConfig: true },
+  typescript: {
+    shim: false,
+  },
+  tailwindcss: {
+    exposeConfig: true,
+  },
   build: { transpile: ["vue-sonner"] },
-  colorMode: { classSuffix: "" },
+  colorMode: {
+    classSuffix: "",
+  },
   css: ["notivue/notifications.css", "notivue/animations.css"],
   notivue: {
     enqueue: true,
@@ -32,19 +38,24 @@ export default defineNuxtConfig({
       title: SITE_TITLE,
       titleTemplate: `%s | ${SITE_NAME}`,
 
-      script: [{
-        src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js",
-        defer: true,
-      }, {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.min.js",
-        defer: true,
-      }, {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/pdfmake.min.js",
-        defer: true
-      }, {
-        src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/vfs_fonts.min.js",
-        defer: true
-      }],
+      script: [
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js",
+          defer: true,
+        },
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.min.js",
+          defer: true,
+        },
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/pdfmake.min.js",
+          defer: true,
+        },
+        {
+          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/vfs_fonts.min.js",
+          defer: true,
+        },
+      ],
     },
   },
 
