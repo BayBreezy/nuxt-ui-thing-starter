@@ -35,7 +35,7 @@
     "typescript": "^5.4.2"
   },
   "dependencies": {
-    "@morev/vue-transitions": "^3.0.1",
+    "@morev/vue-transitions": "^3.0.2",
     "@pinia/nuxt": "^0.5.1",
     "@tanstack/vue-table": "^8.13.2",
     "@vee-validate/nuxt": "^4.12.6",
@@ -59,8 +59,8 @@
     "zod": "3.22.4"
   },
   "overrides": {
-    "datatables.net": "1.13.10",
-    "datatables.net-dt": "1.13.10",
+    "datatables.net": "1.13.11",
+    "datatables.net-dt": "1.13.11",
     "vue": "latest"
   },
   "keywords": [
