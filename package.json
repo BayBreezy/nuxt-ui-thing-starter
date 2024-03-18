@@ -47,7 +47,7 @@
     "datatables.net-rowreorder-dt": "1.5.0",
     "datatables.net-searchbuilder-dt": "^1.7.0",
     "datatables.net-select-dt": "^1.7.1",
-    "datatables.net-vue3": "^3.0.0",
+    "datatables.net-vue3": "^3.0.1",
     "jszip": "^3.10.1",
     "notivue": "^2.2.1",
     "pinia": "^2.1.7",
