@@ -52,7 +52,7 @@
     "notivue": "^2.2.1",
     "pinia": "^2.1.7",
     "radix-vue": "^1.5.2",
-    "tailwind-variants": "^0.2.0",
+    "tailwind-variants": "^0.2.1",
     "vaul-vue": "^0.1.0",
     "vue-sonner": "^1.1.2",
     "vue3-otp-input": "^1.0.0",
