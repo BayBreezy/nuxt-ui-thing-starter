@@ -37,7 +37,7 @@
   "dependencies": {
     "@morev/vue-transitions": "^3.0.2",
     "@pinia/nuxt": "^0.5.1",
-    "@tanstack/vue-table": "^8.15.0",
+    "@tanstack/vue-table": "^8.15.3",
     "@vee-validate/nuxt": "^4.12.6",
     "@vee-validate/zod": "^4.12.6",
     "@vueform/multiselect": "^2.6.7",
@@ -51,7 +51,7 @@
     "jszip": "^3.10.1",
     "notivue": "^2.2.1",
     "pinia": "^2.1.7",
-    "radix-vue": "^1.5.3",
+    "radix-vue": "^1.6.1",
     "tailwind-variants": "^0.2.1",
     "vaul-vue": "^0.1.0",
     "vue-sonner": "^1.1.2",
