@@ -49,7 +49,7 @@
     "datatables.net-select-dt": "^2.0.0",
     "datatables.net-vue3": "^3.0.1",
     "jszip": "^3.10.1",
-    "notivue": "^2.2.1",
+    "notivue": "^2.3.2",
     "pinia": "^2.1.7",
     "radix-vue": "^1.6.1",
     "tailwind-variants": "^0.2.1",
