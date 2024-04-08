@@ -51,7 +51,7 @@
     "jszip": "^3.10.1",
     "notivue": "^2.2.1",
     "pinia": "^2.1.7",
-    "radix-vue": "^1.6.1",
+    "radix-vue": "^1.6.2",
     "tailwind-variants": "^0.2.1",
     "vaul-vue": "^0.1.0",
     "vue-currency-input": "^3.1.0",
