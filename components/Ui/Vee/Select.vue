@@ -1,32 +1,33 @@
 <template>
   <div class="w-full">
-    <UiLabel :for="inputId" v-if="label" :class="[errorMessage && 'text-destructive', 'mb-2']">{{
-      label
-    }}</UiLabel>
+    <UiLabel v-if="label" :for="inputId" :class="[errorMessage && 'text-destructive', 'mb-2']">
+      <span>{{ label }} <span v-if="required" class="text-destructive">*</span></span>
+    </UiLabel>
     <div class="relative">
       <slot name="icon">
         <span v-if="hasIcon" lass="absolute inset-y-0 left-3 flex items-center justify-center">
-          <Icon :name="icon" v-if="icon" class="h-4 w-4 text-muted-foreground" />
+          <Icon v-if="icon" :name="icon" class="h-4 w-4 text-muted-foreground" />
         </span>
       </slot>
       <UiNativeSelect
-        :trailingIcon="trailingIcon"
-        v-model="value"
-        @blur="handleBlur"
         :id="inputId"
+        v-model="value"
+        :required="required"
+        :trailing-icon="trailingIcon"
         :name="name"
         v-bind="$attrs"
         :class="[hasIcon && 'pl-9']"
+        @blur="handleBlur"
       >
-        <slot></slot>
+        <slot />
       </UiNativeSelect>
     </div>
     <TransitionSlide group tag="div">
-      <p key="hint" class="mt-1.5 text-sm text-muted-foreground" v-if="hint && !errorMessage">
+      <p v-if="hint && !errorMessage" key="hint" class="mt-1.5 text-sm text-muted-foreground">
         {{ hint }}
       </p>
 
-      <p key="errorMessage" class="mt-1.5 text-sm text-destructive" v-if="errorMessage">
+      <p v-if="errorMessage" key="errorMessage" class="mt-1.5 text-sm text-destructive">
         {{ errorMessage }}
       </p>
     </TransitionSlide>
@@ -45,6 +46,7 @@
     validateOnMount?: boolean;
     type?: string;
     trailingIcon?: string;
+    required?: boolean;
   }>();
 
   const inputId = props.id || useId();

@@ -3,20 +3,11 @@
     <UiLabel
       v-if="label"
       :for="inputId"
+      :hint="labelHint"
       :class="[disabled && 'text-muted-foreground', errorMessage && 'text-destructive', 'mb-2']"
       ><span>{{ label }} <span v-if="required" class="text-destructive">*</span></span></UiLabel
     >
-    <div class="relative">
-      <UiPinInput
-        :id="inputId"
-        v-bind="{
-          ...$attrs,
-          ...reactiveOmit(props, 'label', 'hint', 'id', 'rules', 'validateOnMount', 'modelValue'),
-        }"
-        v-model="value"
-        @complete="emits('complete', $event)"
-      />
-    </div>
+    <UiDateField v-bind="{ ...$attrs, ...props }" v-model="value" />
     <TransitionSlide group tag="div">
       <p v-if="hint && !errorMessage" key="hint" class="mt-1.5 text-sm text-muted-foreground">
         {{ hint }}
@@ -30,28 +21,27 @@
 </template>
 
 <script lang="ts" setup>
-  import type { PinInputRootProps } from "radix-vue";
+  import type { DateFieldRootProps } from "radix-vue";
 
   const props = defineProps<
-    Omit<PinInputRootProps, "as" | "asChild"> & {
+    DateFieldRootProps & {
       label?: string;
+      labelHint?: string;
       hint?: string;
-      id?: string;
+      modelValue?: string;
+      name?: string;
+
       rules?: any;
       validateOnMount?: boolean;
       separator?: string;
-      inputCount?: number;
+      separatorIcon?: string;
     }
   >();
-
-  const emits = defineEmits<{
-    complete: [value: string[]];
-  }>();
 
   const inputId = props.id || useId();
 
   const { errorMessage, value } = useField(() => props.name || inputId, props.rules, {
-    initialValue: props.modelValue || [],
+    initialValue: props.modelValue,
     label: props.label,
     validateOnMount: props.validateOnMount,
     syncVModel: true,
