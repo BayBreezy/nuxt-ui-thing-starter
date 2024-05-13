@@ -42,7 +42,7 @@
     "@vee-validate/zod": "^4.12.7",
     "@vueform/multiselect": "^2.6.7",
     "datatables.net-buttons-dt": "^3.0.2",
-    "datatables.net-colreorder-dt": "2.0.1",
+    "datatables.net-colreorder-dt": "2.0.2",
     "datatables.net-responsive-dt": "^3.0.2",
     "datatables.net-rowreorder-dt": "1.5.0",
     "datatables.net-searchbuilder-dt": "^1.7.1",
