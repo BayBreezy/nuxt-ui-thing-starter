@@ -57,7 +57,7 @@
     "vue-currency-input": "^3.1.0",
     "vue-sonner": "^1.1.2",
     "vue3-otp-input": "^1.0.0",
-    "zod": "3.23.6"
+    "zod": "3.23.8"
   },
   "overrides": {
     "vue": "latest"
