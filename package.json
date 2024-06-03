@@ -24,7 +24,7 @@
     "@morev/vue-transitions": "^3.0.2",
     "@pinia/nuxt": "^0.5.1",
     "@tanstack/vue-table": "^8.17.3",
-    "@vee-validate/nuxt": "^4.12.8",
+    "@vee-validate/nuxt": "^4.13.0",
     "@vee-validate/zod": "^4.12.8",
     "@vueform/multiselect": "^2.6.7",
     "datatables.net-buttons-dt": "^3.0.2",
