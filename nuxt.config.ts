@@ -5,16 +5,9 @@ import { SITE_NAME, SITE_TITLE } from "./utils/seo";
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  typescript: {
-    shim: false,
-  },
-  tailwindcss: {
-    exposeConfig: true,
-  },
+  tailwindcss: { exposeConfig: true, editorSupport: true },
   build: { transpile: ["vue-sonner"] },
-  colorMode: {
-    classSuffix: "",
-  },
+  colorMode: { classSuffix: "" },
   css: ["notivue/notifications.css", "notivue/animations.css"],
   notivue: {
     enqueue: true,
@@ -62,5 +55,9 @@ export default defineNuxtConfig({
     "@morev/vue-transitions/nuxt",
     // Just in case you need it
     "@pinia/nuxt",
+    "v-wave/nuxt",
   ],
+  vWave: {
+    color: "hsl(var(--primary))",
+  },
 });

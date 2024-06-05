@@ -46,3 +46,5 @@ So on Jan 11, 2024, I remembered that I created this repo. I was going through g
   - This is not needed, I just wanted another toast library to play with. Feel free to remove it if VueSonner or the built in toast works for you.
 - Pinia
   - This can be removed if you don't need it as well.
+- [V-Wave](https://github.com/justintaddei/v-wave)
+  - It just adds a ripple effect any component that you want. It's pretty cool. You can remove it if you don't need it.
