@@ -21,11 +21,12 @@
     "ui:theme": "npx --yes ui-thing@latest theme"
   },
   "dependencies": {
+    "@internationalized/number": "^3.5.3",
     "@morev/vue-transitions": "^3.0.2",
     "@pinia/nuxt": "^0.5.1",
     "@tanstack/vue-table": "^8.17.3",
-    "@vee-validate/nuxt": "^4.13.0",
-    "@vee-validate/zod": "^4.13.0",
+    "@vee-validate/nuxt": "^4.13.1",
+    "@vee-validate/zod": "^4.13.1",
     "@vueform/multiselect": "^2.6.7",
     "datatables.net-buttons-dt": "^3.0.2",
     "datatables.net-colreorder-dt": "2.0.3",
@@ -59,7 +60,7 @@
     "nuxt": "^3.11.2",
     "nuxt-icon": "^0.6.10",
     "prettier": "^3.3.1",
-    "prettier-plugin-tailwindcss": "^0.6.1",
+    "prettier-plugin-tailwindcss": "^0.6.2",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.5"
   },

@@ -57,7 +57,5 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "v-wave/nuxt",
   ],
-  vWave: {
-    color: "hsl(var(--primary))",
-  },
+  vWave: { color: "hsl(var(--primary))" },
 });
