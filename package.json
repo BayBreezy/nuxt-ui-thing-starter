@@ -59,7 +59,7 @@
     "@vueuse/nuxt": "^10.10.0",
     "nuxt": "^3.11.2",
     "nuxt-icon": "^0.6.10",
-    "prettier": "^3.3.1",
+    "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.2",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.5"
