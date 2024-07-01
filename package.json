@@ -24,7 +24,7 @@
     "@internationalized/number": "^3.5.3",
     "@morev/vue-transitions": "^3.0.2",
     "@pinia/nuxt": "^0.5.1",
-    "@tanstack/vue-table": "^8.17.3",
+    "@tanstack/vue-table": "^8.19.2",
     "@vee-validate/nuxt": "^4.13.1",
     "@vee-validate/zod": "^4.13.1",
     "@vueform/multiselect": "^2.6.8",
