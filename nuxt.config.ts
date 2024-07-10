@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   build: { transpile: ["vue-sonner"] },
   colorMode: { classSuffix: "" },
   css: ["notivue/notifications.css", "notivue/animations.css"],
+
   notivue: {
     enqueue: true,
     pauseOnHover: true,
@@ -50,12 +51,14 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "@vueuse/nuxt",
-    "nuxt-icon",
+    "@nuxt/icon",
     "@samk-dev/nuxt-vcalendar",
     "@morev/vue-transitions/nuxt",
     // Just in case you need it
     "@pinia/nuxt",
     "v-wave/nuxt",
   ],
+
   vWave: { color: "hsl(var(--primary))" },
+  compatibilityDate: "2024-07-09",
 });
