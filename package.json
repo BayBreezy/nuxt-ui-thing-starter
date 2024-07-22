@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
-    "@iconify-json/lucide": "^1.1.200",
+    "@iconify-json/lucide": "^1.1.201",
     "@internationalized/date": "^3.5.4",
     "@nuxt/icon": "^1.1.1",
     "@nuxtjs/color-mode": "^3.4.2",
