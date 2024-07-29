@@ -27,7 +27,7 @@
     "@tanstack/vue-table": "^8.19.3",
     "@vee-validate/nuxt": "^4.13.2",
     "@vee-validate/zod": "^4.13.2",
-    "@vueform/multiselect": "^2.6.8",
+    "@vueform/multiselect": "^2.6.9",
     "datatables.net-buttons-dt": "^3.1.0",
     "datatables.net-colreorder-dt": "2.0.3",
     "datatables.net-responsive-dt": "^3.0.2",
