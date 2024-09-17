@@ -16,5 +16,5 @@
 <script setup lang="ts">
   import { ConfigProvider } from "radix-vue";
 
-  const useIdFunction = () => useId();
+  const useIdFunction = () => useId()!;
 </script>
