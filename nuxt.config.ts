@@ -4,7 +4,7 @@
 import { SITE_NAME, SITE_TITLE } from "./utils/seo";
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: true, componentInspector: false },
   tailwindcss: { exposeConfig: true, editorSupport: true },
   build: { transpile: ["vue-sonner"] },
   colorMode: { classSuffix: "" },
