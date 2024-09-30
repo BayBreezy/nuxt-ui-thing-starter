@@ -23,7 +23,7 @@
   "dependencies": {
     "@internationalized/number": "^3.5.3",
     "@morev/vue-transitions": "^3.0.2",
-    "@pinia/nuxt": "^0.5.4",
+    "@pinia/nuxt": "^0.5.5",
     "@tanstack/vue-table": "^8.20.5",
     "@vee-validate/nuxt": "^4.13.2",
     "@vee-validate/zod": "^4.13.2",
