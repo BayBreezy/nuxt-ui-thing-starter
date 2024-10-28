@@ -53,7 +53,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "@iconify-json/lucide": "^1.2.10",
     "@internationalized/date": "^3.5.6",
-    "@nuxt/icon": "^1.5.8",
+    "@nuxt/icon": "^1.6.1",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@samk-dev/nuxt-vcalendar": "^1.0.4",
