@@ -37,7 +37,7 @@
     "datatables.net-vue3": "^3.0.2",
     "jszip": "^3.10.1",
     "notivue": "^2.4.5",
-    "pinia": "^2.2.4",
+    "pinia": "^2.2.6",
     "radix-vue": "^1.9.8",
     "tailwind-variants": "^0.2.1",
     "v-wave": "^3.0.2",
