@@ -23,8 +23,11 @@
   "dependencies": {
     "@internationalized/number": "^3.5.4",
     "@morev/vue-transitions": "^3.0.5",
+    "@nuxt/fonts": "^0.10.2",
     "@pinia/nuxt": "^0.7.0",
     "@tanstack/vue-table": "^8.20.5",
+    "@unovis/ts": "^1.5.0-beta.0",
+    "@unovis/vue": "^1.5.0-beta.0",
     "@vee-validate/nuxt": "^4.14.7",
     "@vee-validate/zod": "^4.14.7",
     "@vueform/multiselect": "^2.6.10",
@@ -52,6 +55,7 @@
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@iconify-json/lucide": "^1.2.13",
+    "@iconify-json/svg-spinners": "^1.2.1",
     "@internationalized/date": "^3.5.6",
     "@nuxt/icon": "^1.7.0",
     "@nuxtjs/color-mode": "^3.5.2",

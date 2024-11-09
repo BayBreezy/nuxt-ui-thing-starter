@@ -17,7 +17,13 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter var", "Inter", ...fontFamily.sans],
+        sans: [
+          `Inter, ${fontFamily.sans.join(", ")}`,
+          {
+            fontFeatureSettings: '"cv02","cv03","cv04","cv11"',
+          },
+        ],
+        mono: ["'Fira Code'", ...fontFamily.mono],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -25,6 +31,27 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        shine: {
+          from: { backgroundPosition: "200% 0" },
+          to: { backgroundPosition: "-200% 0" },
+        },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: 1 },
+          "70%": { opacity: 1 },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: 0,
+          },
+        },
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
         "accordion-down": {
           from: { height: "0px" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -51,6 +78,9 @@ module.exports = {
         },
       },
       animation: {
+        shine: "shine 8s ease-in-out infinite",
+        meteor: "meteor 5s linear infinite",
+        grid: "grid 15s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         fadeIn: "fadeIn 0.2s ease-out",

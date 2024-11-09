@@ -1,15 +1,20 @@
 /**
  * Replace these with the details of your website
  */
-import { SITE_NAME, SITE_TITLE } from "./utils/seo";
+import { SITE_NAME, SITE_TITLE } from "./app/utils/seo";
 
 export default defineNuxtConfig({
-  devtools: { enabled: true, componentInspector: false },
-  tailwindcss: { exposeConfig: true, editorSupport: true },
+  experimental: { typedPages: true },
+  future: { compatibilityVersion: 4 },
+  devtools: { enabled: true },
+  tailwindcss: {
+    exposeConfig: true,
+    editorSupport: true,
+    cssPath: ["~/assets/css/tailwind.css", { injectPosition: "last" }],
+  },
   build: { transpile: ["vue-sonner"] },
-  colorMode: { classSuffix: "" },
+  colorMode: { classSuffix: "", fallback: "light", preference: "light" },
   css: ["notivue/notifications.css", "notivue/animations.css"],
-
   notivue: {
     enqueue: true,
     pauseOnHover: true,
@@ -34,11 +39,11 @@ export default defineNuxtConfig({
 
       script: [
         {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/pdfmake.min.js",
+          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/pdfmake.min.js",
           defer: true,
         },
         {
-          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.9/vfs_fonts.min.js",
+          src: "https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.12/vfs_fonts.min.js",
           defer: true,
         },
       ],
@@ -54,11 +59,10 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@samk-dev/nuxt-vcalendar",
     "@morev/vue-transitions/nuxt",
+    "@nuxt/fonts",
     // Just in case you need it
     "@pinia/nuxt",
     "v-wave/nuxt",
   ],
-
-  vWave: { color: "hsl(var(--primary))" },
   compatibilityDate: "2024-07-09",
 });
