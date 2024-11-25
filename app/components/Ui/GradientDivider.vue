@@ -14,7 +14,7 @@
       }
     >(),
     {
-      decorative: true,
+      as: "hr",
     }
   );
 
