@@ -24,7 +24,7 @@
     "@internationalized/number": "^3.6.0",
     "@morev/vue-transitions": "^3.0.5",
     "@nuxt/fonts": "^0.10.3",
-    "@pinia/nuxt": "^0.8.0",
+    "@pinia/nuxt": "^0.9.0",
     "@tanstack/vue-table": "^8.20.5",
     "@unovis/ts": "^1.5.0-beta.3",
     "@unovis/vue": "^1.5.0-beta.3",
