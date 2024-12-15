@@ -57,7 +57,7 @@
     "@iconify-json/lucide": "^1.2.18",
     "@iconify-json/svg-spinners": "^1.2.1",
     "@internationalized/date": "^3.6.0",
-    "@nuxt/icon": "^1.9.1",
+    "@nuxt/icon": "^1.10.1",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@samk-dev/nuxt-vcalendar": "^1.0.4",
