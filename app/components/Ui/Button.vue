@@ -21,6 +21,9 @@
         <Icon :name="icon" class="size-5" />
       </div>
     </slot>
+    <slot name="loading">
+      <Icon v-if="loading" class="size-4 shrink-0" :name="loadingIcon" />
+    </slot>
     <slot>
       <span v-if="text">{{ text }}</span>
     </slot>
@@ -44,7 +47,7 @@
   const props = withDefaults(
     defineProps<
       NuxtLinkProps & {
-        /** The type fro the button */
+        /** The type for the button */
         type?: "button" | "submit" | "reset";
         /** Whether the button is disabled */
         disabled?: boolean;
@@ -66,10 +69,15 @@
         iconPlacement?: "left" | "right";
         /** The icon to display in the button */
         icon?: string;
+        /** The icon to display when the button is loading */
+        loadingIcon?: string;
       }
     >(),
     {
       type: "button",
+      loadingIcon: "line-md:loading-loop",
+      iconPlacement: "left",
+      loading: false,
     }
   );
 
@@ -90,7 +98,8 @@
       "variant",
       "as",
       "loading",
-      "disabled"
+      "disabled",
+      "loadingIcon"
     )
   );
 </script>
